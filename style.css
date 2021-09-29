@@ -1,0 +1,16 @@
+:root {
+    --mustard: #fbb02d;
+    --dark-green: #5c8001;
+    --light-green: #7cb518;
+    --dark-grey: #1a252f;
+    --orange: #f09464;
+    --oorange: #ed9660;
+}
+
+.bg-primary {
+    background-color: var(--mustard) !important;
+}
+
+.bg-mustard {
+    background-color: var(--dark-green);
+}
