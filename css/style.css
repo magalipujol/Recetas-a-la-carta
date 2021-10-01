@@ -4,7 +4,6 @@
     --light-green: #7cb518;
     --dark-grey: #1a252f;
     --orange: #f09464;
-    --oorange: #ed9660;
 }
 
 .bg-primary {
@@ -18,3 +17,8 @@
 body {
     font-family: 'Lato', sans-serif !important; 
 }
+
+html {
+    scroll-behavior: smooth;
+}
+

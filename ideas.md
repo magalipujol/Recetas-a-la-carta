@@ -3,9 +3,10 @@
 - the recipes that people upload should be sent to me
 
 # Style
-- TODO style the navbar
+- TODO improve shrink of navbar
 - TODO style the header
 - TODO style the carousel
+- add animation like this one http://anijs.github.io/examples/scrollreveal/
 - add smooth scrolling
 - add favicon
 

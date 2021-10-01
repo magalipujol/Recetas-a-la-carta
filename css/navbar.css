@@ -1,0 +1,42 @@
+:root {
+    --mustard: #fbb02d;
+    --dark-green: #5c8001;
+    --light-green: #7cb518;
+    --dark-grey: #1a252f;
+    --orange: #f09464;
+}
+
+.nav-link {
+    color: white !important;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.nav-link:active, .active {
+    background-color: var(--mustard);
+    border-radius: 7%;   
+}
+
+.nav-link:hover {
+    color: var(--mustard) !important;
+}
+
+/* WTF si le pongo mustard se rompeeeee */
+.active:hover, .nav-link:active:hover, .nav-link:hover:active {
+    background-color: #1a252f;
+    background-color: var(--mustard);
+    background-color: #f1a82b;
+}
+
+
+.navbar-brand {
+    color: white !important;
+    font-size: 1.7em;
+    font-weight: bolder;
+    
+}
+
+/* TODO improve it pleaaaaaase */
+.shrink {
+    max-height: 50px;
+}
