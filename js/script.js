@@ -17,7 +17,7 @@ function addSectionsToMenu(sectionName, sectionID) {
     newSection.setAttribute("id", sectionID)
     newTitle.innerHTML = sectionName
     newSection.appendChild(newTitle)
-    document.body.appendChild(newSection)
+    document.getElementById("menu").appendChild(newSection)
 }
 
 for (let section of recipes) {
