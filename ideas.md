@@ -1,0 +1,2 @@
+- change slider menu to database
+- add language toggler
