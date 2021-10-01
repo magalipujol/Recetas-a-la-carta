@@ -23,3 +23,4 @@ $('.slider-menu').slick({
     }
   ]
 });
+
