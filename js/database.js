@@ -46,15 +46,55 @@ let recipes = [
         ]
     },
     {
-        sectionName: "Ensaladas"
+        sectionName: "Ensaladas",
+        sectionID: "ensaladas-content",
+        contents: [
+            {
+                title: "Malfatti de espinaca",
+                price: 10,
+                instructions: loremIntruccion,
+                imageSRC: loremImgSRC,
+                imageAlt: loremImgAlt
+            }
+        ]
     },
     {
-        sectionName: "Sandwiches"
+        sectionName: "Sandwiches",
+        sectionID: "sandwiches-content",
+        contents: [
+            {
+                title: "Malfatti de espinaca",
+                price: 10,
+                instructions: loremIntruccion,
+                imageSRC: loremImgSRC,
+                imageAlt: loremImgAlt
+            }
+        ]
     },
     {
         sectionName: "Postres",
+        sectionID: "postres-content",
+        contents: [
+            {
+                title: "Malfatti de espinaca",
+                price: 10,
+                instructions: loremIntruccion,
+                imageSRC: loremImgSRC,
+                imageAlt: loremImgAlt
+            }
+        ]
     },
     {
         sectionName: "Bebidas",
+        sectionID: "bebidas-content",
+        contents: [
+            {
+                title: "Malfatti de espinaca",
+                price: 10,
+                instructions: loremIntruccion,
+                imageSRC: loremImgSRC,
+                imageAlt: loremImgAlt
+            }
+        ]
     }
 ]
