@@ -16,9 +16,40 @@
 
 body {
     font-family: 'Lato', sans-serif !important; 
+    text-align: center;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+/* ************** */
+/* Carousel style */
+/* ************** */
+.slick-prev, .slick-next {
+    background-color: white;
+    border: none;
+    color: var(--dark-grey);
+    
+}
+
+.carousel-link {
+    color: var(--dark-grey);
+    font-weight: bolder;
+    text-transform: uppercase;
+    border: none;
+    width: 125px;
+    text-align: center;
+}
+
+.carousel-link:hover {
+    background-color: var(--mustard);
+    border: none;
+}
+
+
+.slick-slider {
+    display: flex !important;
+    padding-left: 10%;
+    padding-right: 10%;
+}

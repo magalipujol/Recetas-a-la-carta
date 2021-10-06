@@ -3,6 +3,7 @@ function addSectionsToCarousel(sectionName, sectionID) {
     var newSectionName = document.createElement("a")
     newSectionName.href = "#" + sectionID
     newSectionName.innerHTML = sectionName
+    newSectionName.classList.add("carousel-link")
     newListItem.appendChild(newSectionName)
     document.getElementById("slider-menu").appendChild(newListItem)
 }

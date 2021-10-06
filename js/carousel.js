@@ -9,7 +9,7 @@ $('.slider-menu').slick({
         arrows: false,
         centerMode: true,
         centerPadding: '40px',
-        slidesToShow: 3
+        slidesToShow: 2
       }
     },
     {
@@ -24,3 +24,5 @@ $('.slider-menu').slick({
   ]
 });
 
+document.getElementsByClassName("slick-prev")[0].innerHTML ='<i class="fas fa-arrow-left"></i>'
+document.getElementsByClassName("slick-next")[0].innerHTML ='<i class="fas fa-arrow-right"></i>'
