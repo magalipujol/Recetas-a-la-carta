@@ -12,30 +12,15 @@
     font-weight: bolder;
 }
 
-/* .nav-link:active, .active {
+.nav-link:active, .active {
     background-color: var(--mustard) !important;
     border-radius: 7%;   
 }
 
-
-.nav-link:hover:not(:active) {
-    color: var(--mustard) !important;
-} */
-
-.nav-item:hover:active, .active {
-    background-color: red;
+/* TODO no se si me gusta tanto pero bueno */
+.nav-link:hover {
+    color: var(--dark-grey) !important;
 }
-
-.nav-item:not(hover):active, .active:not(:hover) {
-    background-color: blue;
-}
-
-.nav-item:hover:not(:active), .nav-item:hover:not(.active) {
-    background-color: yellow;
-}
-
-
-
 
 .navbar-brand {
     color: white !important;
