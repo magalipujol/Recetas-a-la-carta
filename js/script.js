@@ -24,7 +24,7 @@ function addSectionsToMenu(sectionName, sectionID) {
     newContainer.classList.add("container")
     var newRow = document.createElement("div")
     newRow.classList.add("row")
-    newRow.classList.add("row-cols-3")
+    newRow.classList.add("row-cols-2")
     newRow.setAttribute("id", sectionName + "-row")
     newContainer.appendChild(newRow)
     newSection.appendChild(newContainer)
