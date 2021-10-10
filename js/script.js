@@ -13,7 +13,7 @@ for (let section of recipes) {
 }
 
 function addSectionsToMenu(sectionName, sectionID) {
-    console.log(sectionID + " ESTE ES EL ID DE LA ROW")
+
     var newSection = document.createElement("div")
     var newTitle = document.createElement("h1")
     newSection.setAttribute("id", sectionID)
@@ -25,11 +25,11 @@ function addSectionsToMenu(sectionName, sectionID) {
     var newRow = document.createElement("div")
     newRow.classList.add("row")
     newRow.classList.add("row-cols-3")
-    // TODO change this to id
     newRow.setAttribute("id", sectionName + "-row")
     newContainer.appendChild(newRow)
     newSection.appendChild(newContainer)
     document.getElementById("menu").appendChild(newSection)
+
 }
 
 
@@ -37,8 +37,8 @@ for (let section of recipes) {
     addSectionsToMenu(section.sectionName, section.sectionID)
 }
 
-function addDishesToSections(sectionID, title, price, image, imageAlt) {
-    console.log(sectionID + " ESTE ES EL ID DE cosa")
+function addDishesToSections(sectionName, title, price, image, imageAlt) {
+    
     
     
     //   this create the card and adds bootstrap classes
@@ -50,8 +50,6 @@ function addDishesToSections(sectionID, title, price, image, imageAlt) {
     newColumn.classList.add("dish")
     newCard.classList.add("card")
     newCard.classList.add("mb-3")
-    //   ! capaz esto se rompe
-    //    newCard.style.maxWidth("540px")
     newRow.classList.add("row")
     newRow.classList.add("g-0")
 
@@ -94,13 +92,12 @@ function addDishesToSections(sectionID, title, price, image, imageAlt) {
     // newDish.appendChild(newTitle)
     // newDish.appendChild(newPrice)
 
-    var tempId = sectionID + "-row"
-
+    var tempId = sectionName + "-row"
     document.getElementById(tempId).appendChild(newColumn)
 }
 
 for (let section of recipes) {
-    var tempID = section.sectionID
+    var tempID = section.sectionName
     for (let dish of section.contents) {
         addDishesToSections(tempID, dish.title, dish.price, dish.imageSRC, dish.imageAlt)
     }
