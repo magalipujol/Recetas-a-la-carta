@@ -50,9 +50,17 @@ html {
 
 .slick-slider {
     display: flex !important;
-    padding-left: 10%;
-    padding-right: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
+
+.slider-menu {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 3%;
+    background-color: var(--light-green);
+}
+
 
 /* ************ */
 /* Header style */

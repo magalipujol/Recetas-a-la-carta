@@ -8,5 +8,5 @@ for (var link of carouselLinks) {
 
 var cards = document.getElementsByClassName("card")
 for (var card of cards) {
-    card.style.cssText = 'max-width: 450px;'
+    card.style.cssText = 'max-width: 540px;'
 }
