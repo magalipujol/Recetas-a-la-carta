@@ -40,7 +40,7 @@ function addSectionsToMenu(sectionName, sectionID) {
     newSection.appendChild(newTitle)
     // the next lines create a grid to save the dishes
     var newContainer = createElementsAndAddIdentifiers('div', 0, ['container'])
-    var newRow = createElementsAndAddIdentifiers('div', sectionName + "-row", ['row', 'row-cols-2'])
+    var newRow = createElementsAndAddIdentifiers('div', sectionName + "-row", ['row', 'row-cols-3'])
     newContainer.appendChild(newRow)
     newSection.appendChild(newContainer)
     document.getElementById("menu").appendChild(newSection)
