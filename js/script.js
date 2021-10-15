@@ -1,22 +1,32 @@
 function createElementsAndAddIdentifiers(element, ID, ...classes) {
-    var newDiv = document.createElement(element)
-    var classesNames = classes[0]
-    for (const className of classesNames) {
-        newDiv.classList.add(className)
+    var newElement = document.createElement(element)
+    if (classes != 0) {
+        var classesNames = classes[0]
+        for (const className of classesNames) {
+            newElement.classList.add(className)
+        }
     }
-    console.log(classes)
-    newDiv.setAttribute('id', ID)
-    return newDiv
+    if (ID != 0) {
+        newElement.setAttribute('id', ID)
+    }
+    return newElement
 }
 
+
 function addSectionsToCarousel(sectionName, sectionID) {
-    var newListItem = document.createElement("li")
-    var newSectionName = document.createElement("a")
+    var newListItem = createElementsAndAddIdentifiers('li', 0, 0)
+    var newSectionName = createElementsAndAddIdentifiers('a', 0, ["carousel-link"])
     newSectionName.href = "#" + sectionID
     newSectionName.innerHTML = sectionName
-    newSectionName.classList.add("carousel-link")
     newListItem.appendChild(newSectionName)
     document.getElementById("slider-menu").appendChild(newListItem)
+    // var newListItem = document.createElement("li")
+    // var newSectionName = document.createElement("a")
+    // newSectionName.href = "#" + sectionID
+    // newSectionName.innerHTML = sectionName
+    // newSectionName.classList.add("carousel-link")
+    // newListItem.appendChild(newSectionName)
+    // document.getElementById("slider-menu").appendChild(newListItem)
 }
 
 for (let section of recipes) {
@@ -24,75 +34,54 @@ for (let section of recipes) {
 }
 
 function addSectionsToMenu(sectionName, sectionID) {
-
-    var newSection = document.createElement("div")
-    var newTitle = document.createElement("h1")
-    newSection.setAttribute("id", sectionID)
+    var newSection = createElementsAndAddIdentifiers('div', sectionID, 0) 
+    var newTitle = createElementsAndAddIdentifiers('h1', 0, 0) 
     newTitle.innerHTML = sectionName
     newSection.appendChild(newTitle)
     // the next lines create a grid to save the dishes
-    var newContainer = document.createElement("div")
-    newContainer.classList.add("container")
-    var newRow = document.createElement("div")
-    newRow.classList.add("row")
-    newRow.classList.add("row-cols-2")
-    newRow.setAttribute("id", sectionName + "-row")
+    var newContainer = createElementsAndAddIdentifiers('div', 0, ['container'])
+    var newRow = createElementsAndAddIdentifiers('div', sectionName + "-row", ['row', 'row-cols-2'])
     newContainer.appendChild(newRow)
     newSection.appendChild(newContainer)
     document.getElementById("menu").appendChild(newSection)
-
 }
-
 
 for (let section of recipes) {
     addSectionsToMenu(section.sectionName, section.sectionID)
 }
 
-function addDishesToSections(sectionName, title, price, image, imageAlt) {
-    //   this create the card and adds bootstrap classes
-    var newColumn = document.createElement("div")
-    var newCard = document.createElement("div")
-    var newRow = document.createElement("div")
-
-    newColumn.classList.add("col")
-    newColumn.classList.add("dish")
-    newCard.classList.add("card")
-    newCard.classList.add("mb-3")
-    newRow.classList.add("row")
-    newRow.classList.add("g-0")
+function createCard(image, imageAlt, title, price) {
+    var newColumn = createElementsAndAddIdentifiers('div', 0, ['col', 'dish'])
+    var newCard = createElementsAndAddIdentifiers('div', 0, ['card', 'mb-3'])
+    var newRow = createElementsAndAddIdentifiers('div', 0, ['row', 'g-0'])
 
     newColumn.appendChild(newCard)
     newCard.appendChild(newRow)
 
-    // add image to card
-    var newImgColumn = document.createElement("div")
-    newImgColumn.classList.add("col-md-4")
-    var newImage = document.createElement("img")
-    newImage.classList.add("img-fluid")
-    newImage.classList.add("rounded-start")
+    var newImgColumn = createElementsAndAddIdentifiers('div', 0, ["col-md-4"])
+    var newImage = createElementsAndAddIdentifiers('img', 0, ['img-fluid', 'rounded-start'])
     newImage.setAttribute("src", image)
     newImage.setAttribute("alt", imageAlt)
-
     newImgColumn.appendChild(newImage)
     newRow.appendChild(newImgColumn)
-
-    // add text to card
-    var newTextColumn = document.createElement("div")
-    var newCardBody = document.createElement("div")
-    newTextColumn.classList.add("col-md-8")
-    newCardBody.classList.add("card-body")
+    
+    var newTextColumn = createElementsAndAddIdentifiers('div', 0, ["col-md-8"])
+    var newCardBody = createElementsAndAddIdentifiers('div', 0, ["card-body"])
     newTextColumn.appendChild(newCardBody)
     newRow.appendChild(newTextColumn)
 
-    var newTitle = document.createElement("h5")
-    var newPrice = document.createElement("p")
-    newTitle.classList.add("card-title")
-    newPrice.classList.add("card-text")
+    var newTitle = createElementsAndAddIdentifiers('h5', 0, 'card-title')
+    var newPrice = createElementsAndAddIdentifiers('p', 0, ['card-text'])
     newTitle.innerHTML = title
     newPrice.innerHTML = "$" + price
 
     newCardBody.appendChild(newTitle)
     newCardBody.appendChild(newPrice)
+    return newColumn
+}
+
+function addDishesToSections(sectionName, title, price, image, imageAlt) {
+    var newColumn = createCard(image, imageAlt, title, price)
 
     var tempId = sectionName + "-row"
 
