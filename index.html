@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="img/favicon_io/salad-android-chrome-192x192.png" type="image/x-icon">
     <!-- Bootstrap stylesheet -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- My stylesheets -->
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/style.css">
@@ -24,37 +24,19 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
         type="text/css">
     <!-- Animate.css -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg  navbar-light bg-mustard sticky-top" id="navbar">
-        <a href="#page-top" class="navbar-brand">RECETAS a la CARTA</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link navigation-link" href="index.html">carta <span
-                            class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link navigation-link" href="form.html">envianos tu receta!</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link navigation-link" href="about.html">sobre mi</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <div id="app">
+        <navbar></navbar>
+    </div>
     <header class="bg-primary text-white text-center">
         <img class="animate__animated animate__backInDown" src="img/favicon_io/salad-apple-touch-icon.png" alt="">
         <!-- TODO no se si queda bien el icon -->
-        <h1 id="main-title"> <i class="fas fa-utensils"></i>  Recetas a la carta <i class="fas fa-utensils"></i></h1>
-        
+        <h1 id="main-title"> <i class="fas fa-utensils"></i> Recetas a la carta <i class="fas fa-utensils"></i></h1>
+
     </header>
 
     <ul class="slider-menu" id="slider-menu">
@@ -63,7 +45,7 @@
     <div id="menu"></div>
 
     <footer>
-        <p class="jeje"style="background-color: aquamarine;">Lorem ipsum dolor sit amet consectetur.</p>
+        <p class="jeje" style="background-color: aquamarine;">Lorem ipsum dolor sit amet consectetur.</p>
     </footer>
 
     <!-- Bootstrap JavaScript -->
@@ -85,8 +67,11 @@
     <script src="js/database.js"></script>
     <script src="js/script.js"></script>
     <script src="js/carousel.js"></script>
-    <script src="js/navbar-shrink.js"></script>
     <script src="js/bootstrap-style.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <!-- <script src="js/navbar.js"></script> -->
+    <script src="js/vueApp.js"></script>
+
 </body>
 
 </html>
