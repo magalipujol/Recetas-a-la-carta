@@ -20,13 +20,6 @@ function addSectionsToCarousel(sectionName, sectionID) {
     newSectionName.innerHTML = sectionName
     newListItem.appendChild(newSectionName)
     document.getElementById("slider-menu").appendChild(newListItem)
-    // var newListItem = document.createElement("li")
-    // var newSectionName = document.createElement("a")
-    // newSectionName.href = "#" + sectionID
-    // newSectionName.innerHTML = sectionName
-    // newSectionName.classList.add("carousel-link")
-    // newListItem.appendChild(newSectionName)
-    // document.getElementById("slider-menu").appendChild(newListItem)
 }
 
 for (let section of recipes) {
