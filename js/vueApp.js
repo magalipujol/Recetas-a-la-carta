@@ -32,9 +32,12 @@ app.component('navbar', {
 } )
 
 app.component('animated-header', {
+    props: ['animation'],
     template: `
     <header class="bg-primary text-white text-center">
-        <img class="animate__animated animate__backInDown" src="img/favicon_io/salad-apple-touch-icon.png" alt="">
+    <div v-if="animation == 'true'">
+    <img class="animate__animated animate__backInDown" src="img/favicon_io/salad-apple-touch-icon.png" alt="">
+    </div>
         <h1 id="main-title"> <i class="fas fa-utensils"></i> Recetas a la carta <i class="fas fa-utensils"></i></h1>
     </header>
     `
