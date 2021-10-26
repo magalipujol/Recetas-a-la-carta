@@ -14,12 +14,22 @@ function createElementsAndAddIdentifiers(element, ID, ...classes) {
 
 
 function addSectionsToCarousel(sectionName, sectionID) {
-    var newListItem = createElementsAndAddIdentifiers('li', 0, 0)
-    var newSectionName = createElementsAndAddIdentifiers('a', 0, ["carousel-link"])
-    newSectionName.href = "#" + sectionID
-    newSectionName.innerHTML = sectionName
-    newListItem.appendChild(newSectionName)
-    document.getElementById("slider-menu").appendChild(newListItem)
+
+    if (sectionID == 'tartas-content') {
+        var newItem = createElementsAndAddIdentifiers('div', 0, ['carousel-item', 'active'])
+    } else {
+        var newItem = createElementsAndAddIdentifiers('div', 0, ['carousel-item'])
+    }
+    var newLink = createElementsAndAddIdentifiers('a', 0, 0)
+    newLink.href = "#" + sectionID
+    newItem.appendChild(newLink)
+    newLink.innerHTML = sectionName
+    newItem.setAttribute('id', sectionID + '-id')
+
+
+
+
+    document.getElementById("carousel-inner").appendChild(newItem)
 }
 
 for (let section of recipes) {
@@ -27,8 +37,8 @@ for (let section of recipes) {
 }
 
 function addSectionsToMenu(sectionName, sectionID) {
-    var newSection = createElementsAndAddIdentifiers('div', sectionID, 0) 
-    var newTitle = createElementsAndAddIdentifiers('h1', 0, 0) 
+    var newSection = createElementsAndAddIdentifiers('div', sectionID, 0)
+    var newTitle = createElementsAndAddIdentifiers('h1', 0, 0)
     newTitle.innerHTML = sectionName
     newSection.appendChild(newTitle)
     // the next lines create a grid to save the dishes
@@ -57,7 +67,7 @@ function createCard(image, imageAlt, title, price) {
     newImage.setAttribute("alt", imageAlt)
     newImgColumn.appendChild(newImage)
     newRow.appendChild(newImgColumn)
-    
+
     var newTextColumn = createElementsAndAddIdentifiers('div', 0, ["col-md-8"])
     var newCardBody = createElementsAndAddIdentifiers('div', 0, ["card-body"])
     newTextColumn.appendChild(newCardBody)
