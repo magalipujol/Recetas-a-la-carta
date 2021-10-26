@@ -31,4 +31,13 @@ app.component('navbar', {
     }
 } )
 
+app.component('animated-header', {
+    template: `
+    <header class="bg-primary text-white text-center">
+        <img class="animate__animated animate__backInDown" src="img/favicon_io/salad-apple-touch-icon.png" alt="">
+        <h1 id="main-title"> <i class="fas fa-utensils"></i> Recetas a la carta <i class="fas fa-utensils"></i></h1>
+    </header>
+    `
+})
+
 app.mount('#app')
