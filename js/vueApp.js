@@ -1,7 +1,7 @@
 let app = Vue.createApp({
   data: function () {
     return {
-
+      recipes: recipes
     };
   },
 });
@@ -45,16 +45,19 @@ app.component("animated-header", {
     `,
 });
 
+// AAAAAAAAAAAAAAAAAAA PQ NO SALE
 app.component("slider-menu", {
-  props: ["recipes"],
+  props: {
+    recipes: Array
+  },
   template: `
     <div class="slider-menu" id="slider-menu">
     <div id="carousel-controls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" id="carousel-inner">
     <div id="tartas-content-id" class="carousel-item active">
-    <a href="#tartas-content">{{ recipes[0].sectionName }} </a>
+    <a href="#tartas-content">{{ this.recipes[0].sectionName }} </a>
       </div>
-      <div id="pastas-content-id" class="carousel-item active">
+      <div id="pastas-content-id" class="carousel-item">
         <a href="#pastas-content">PAstas</a>
       </div>
     </div>
