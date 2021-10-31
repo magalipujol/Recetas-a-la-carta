@@ -14,7 +14,7 @@ let recipes = [
                 price: 10,
                 ingredients: ' 250 cm3 de crema \n 3 huevos\n 1 cebolla roja grande\n 150 gr de queso azul \n ½ taza de queso de rallar\n 50 gr de salmón ahumado \n 1 ramito de eneldo (si encontrás)',
                 instructions: loremIntruccion,
-                imageSRC:  '/img/recetas/tarta-salmon-roquefort.jpg',
+                imageSRC:  'img/recetas/tarta-salmon-roquefort.jpg',
                 imageAlt: 'Tarta de salmón ahumado y queso azul',
                 recipeID: 'tarta-salmon'
             },
@@ -22,7 +22,7 @@ let recipes = [
                 title: "Tarta de choclo",
                 price: 10,
                 instructions: loremIntruccion,
-                imageSRC: '/img/recetas/tarta-choclo.jpg',
+                imageSRC: 'img/recetas/tarta-choclo.jpg',
                 imageAlt: loremImgAlt,
                 recipeID: 'tarta-choclo'
             },
@@ -30,7 +30,7 @@ let recipes = [
                 title: "Tarta de tomate, cebolla y queso",
                 price: 10,
                 instructions: loremIntruccion,
-                imageSRC: '/img/recetas/tarta-capresse.jpg',
+                imageSRC: 'img/recetas/tarta-capresse.jpg',
                 imageAlt: loremImgAlt,
                 recipeID: 'tarta-capresse'
             },
@@ -38,7 +38,7 @@ let recipes = [
                 title: "Tarta de espinaca",
                 price: 10,
                 instructions: loremIntruccion,
-                imageSRC: '/img/recetas/tarta-espinaca.jpg',
+                imageSRC: 'img/recetas/tarta-espinaca.jpg',
                 imageAlt: loremImgAlt,
                 recipeID: 'tarta-espinaca'
             }
