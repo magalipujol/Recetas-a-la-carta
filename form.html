@@ -21,37 +21,37 @@
 <body>
     <div id="app">
         <navbar></navbar>
-        <animated-header :animation="false"></animated-header>
+        <animated-header :animation="true"></animated-header>
     </div>
 
-    <form>
+    <form name="enviar-receta" onsubmit="return validateForm()">
         <div class="form-group">
             <label for="input-name">Nombre</label>
-            <input type="text" class="form-control" id="input-name" placeholder="Ingresá tu nombre">
-            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+            <input type="text" class="form-control" id="input-name" placeholder="Ingresá tu nombre" name="nombre">
+            <small id="emailHelp" class="form-text text-muted">No compartiremos tu email con nadie.</small>
         </div>
         <div class="form-group">
             <label for="input-title">Título de la receta</label>
             <input type="text" class="form-control" id="input-title" placeholder="">
         </div>
-        <!-- TODO this should be a textarea -->
         <div class="form-group">
             <label for="input-instructions">Pasos de la receta</label>
-            <input type="text" class="form-control" id="input-instructions" placeholder="">
+            <input type="text" class="form-control" id="input-instructions" placeholder="" name="pasos">
         </div>
         <div class="form-group">
-            <label for="input-image">Imagen</label>
-            <input type="file" class="form-control" id="input-image" placeholder="">
+            <label for="input-image">Imagen <small>(opcional)</small></label>
+            <input type="file" class="form-control" id="input-image" placeholder="" name="imagen">
         </div>
         <div class="form-group">
             <label for="input-image">Precio aproximado <small>(opcional)</small></label>
             <input type="number" class="form-control" id="input-image" placeholder="Precio en pesos argentinos">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary btn-form">Enviar</button>
     </form>
     <script src="js/database.js"></script>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="js/vueApp.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
