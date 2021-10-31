@@ -34,10 +34,12 @@ app.component("navbar", {
 });
 
 app.component("animated-header", {
-  props: ["animation"],
+  props: {
+    animation: Boolean
+  },
   template: `
     <header class="bg-primary text-white text-center">
-    <div v-if="animation == 'true'">
+    <div v-if="animation">
     <img class="animate__animated animate__backInDown" src="img/favicon_io/salad-apple-touch-icon.png" alt="">
     </div>
         <h1 id="main-title"> <i class="fas fa-utensils"></i> Recetas a la carta <i class="fas fa-utensils"></i></h1>
@@ -55,7 +57,7 @@ app.component("slider-menu", {
     <div id="carousel-controls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" id="carousel-inner">
     <div id="tartas-content-id" class="carousel-item active">
-    <a href="#tartas-content">{{ this.recipes[0].sectionName }} </a>
+    <a href="#tartas-content">{{ recipes[0].sectionName }} </a>
       </div>
       <div id="pastas-content-id" class="carousel-item">
         <a href="#pastas-content">PAstas</a>
