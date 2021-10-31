@@ -90,21 +90,21 @@ app.component("card-recipe", {
   <button type="button" class="btn btn-modal" data-toggle="modal" :data-target="'#' + recipe.recipeID">
 
         <div class="card mb-3" style="max-width: 350px">
-            <div class="row g-0">
-                <div class="col-md-4">
+
+
                     <img
                     :src="recipe.imageSRC"
                     :alt="recipe.title"
                     class="img-fluid rounded-start"
                     />
                 </div>
-                <div class="col-md-8">
+
                     <div class="card-body">
                         <h5 class="card-tile">{{ recipe.title }}</h5>
                         <p class="card-text">$ {{ recipe.price }}</p>
-                    </div>
-                </div>
-            </div>
+
+
+
         </div>
     </button>
     <div class="modal fade" :id="recipe.recipeID" tabindex="-1" role="dialog" aria-labelledby="recipe.recipeID + '-label'" aria-hidden="true">
