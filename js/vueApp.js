@@ -82,4 +82,56 @@ app.component("slider-menu", {
     `,
 });
 
+app.component("card-recipe", {
+  props: {
+    recipe: Object,
+  },
+  template: /* html */ `
+  <button type="button" class="btn btn-modal" data-toggle="modal" :data-target="'#' + recipe.recipeID">
+
+        <div class="card mb-3" style="max-width: 350px">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img
+                    :src="recipe.imageSRC"
+                    :alt="recipe.title"
+                    class="img-fluid rounded-start"
+                    />
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-tile">{{ recipe.title }}</h5>
+                        <p class="card-text">$ {{ recipe.price }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </button>
+    <div class="modal fade" :id="recipe.recipeID" tabindex="-1" role="dialog" aria-labelledby="recipe.recipeID + '-label'" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" :id="recipe.recipeID + '-label'">{{ recipe.title }}</h4>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <img
+            :src="recipe.imageSRC"
+            :alt="recipe.title"
+            class="img-fluid rounded-start"
+            />
+            <h5>Ingredientes</h5>
+            <p> {{ recipe.ingredients }}</p>
+        <h5>Instrucciones</h5>
+        <p>{{ recipe.instructions }}</p>
+        <div class="modal-footer">
+        </div>
+    </div>
+</div>
+</div>
+</div>`,
+});
 app.mount("#app");

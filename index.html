@@ -1,68 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recetas a la carta</title>
     <!-- RC icon -->
     <!-- <link rel="shortcut icon" href="img/favicon_io/RC-android-chrome -512x512.png" type="image/x-icon"> -->
     <!-- salad icon -->
-    <link rel="shortcut icon" href="img/favicon_io/salad-android-chrome-192x192.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="img/favicon_io/salad-android-chrome-192x192.png"
+      type="image/x-icon"
+    />
     <!-- Bootstrap stylesheet -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
     <!-- My stylesheets -->
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Slick carousel stylesheet -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+    />
     <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
-        type="text/css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
     <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <script src="https://unpkg.com/vue@next"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="app">
-        <navbar></navbar>
-        <animated-header :animation="true"></animated-header>
-        <slider-menu :recipes="recipes"></slider-menu>
+      <navbar></navbar>
+      <animated-header :animation="true"></animated-header>
+      <slider-menu :recipes="recipes"></slider-menu>
+      <div id="tartas-content">
+          <h1>Tartas</h1>
+          <div class="container">
+              <div v-for="recipe of recipes[0].contents">
+                  <card-recipe :recipe="recipe"></card-recipe>
+              </div>
+          </div>
+      </div>
+      <div id="pastas-content">
+          <h1>Pastas</h1>
+          <div class="container">
+            <div v-for="recipe of recipes[1].contents">
+                <card-recipe :recipe="recipe"></card-recipe>
+            </div>
+          </div>
+      </div>
+      <div id="ensaladas-content">
+        <h1>Ensaladas</h1>
+        <div class="container">
+          <div v-for="recipe of recipes[2].contents">
+              <card-recipe :recipe="recipe"></card-recipe>
+          </div>
+        </div>
+    </div>
+    <div id="sandwiches-content">
+        <h1>Sandwiches</h1>
+        <div class="container">
+          <div v-for="recipe of recipes[3].contents">
+              <card-recipe :recipe="recipe"></card-recipe>
+          </div>
+        </div>
+    </div>
+    <div id="postres-content">
+        <h1>Postres</h1>
+        <div class="container">
+          <div v-for="recipe of recipes[4].contents">
+              <card-recipe :recipe="recipe"></card-recipe>
+          </div>
+        </div>
+    </div>
+    <div id="bebidas-content">
+        <h1>Bebidas</h1>
+        <div class="container">
+          <div v-for="recipe of recipes[5].contents">
+              <card-recipe :recipe="recipe"></card-recipe>
+          </div>
+        </div>
+    </div>
     </div>
 
     <div id="menu"></div>
 
-    <footer>
-        <p class="jeje" style="background-color: aquamarine;">Lorem ipsum dolor sit amet consectetur.</p>
+
+
+<footer>
+    <p class="jeje" style="background-color: aquamarine">
+        Lorem ipsum dolor sit amet consectetur.
+    </p>
     </footer>
 
     <!-- Bootstrap JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
     <!-- jQuery JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- Slick Carousel JavaScript -->
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
     <script src="js/database.js"></script>
+
     <script src="js/script.js"></script>
     <script src="js/bootstrap-style.js"></script>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="js/vueApp.js"></script>
-
-</body>
-
+  </body>
 </html>

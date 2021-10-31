@@ -12,31 +12,35 @@ let recipes = [
             {
                 title: "Tarta de salmón ahumado y queso azul",
                 price: 10,
-                ingredientes: ' 250 cm3 de crema \n 3 huevos\n 1 cebolla roja grande\n 150 gr de queso azul \n ½ taza de queso de rallar\n 50 gr de salmón ahumado \n 1 ramito de eneldo (si encontrás)', 
+                ingredients: ' 250 cm3 de crema \n 3 huevos\n 1 cebolla roja grande\n 150 gr de queso azul \n ½ taza de queso de rallar\n 50 gr de salmón ahumado \n 1 ramito de eneldo (si encontrás)',
                 instructions: loremIntruccion,
                 imageSRC:  '/img/recetas/tarta-salmon-roquefort.jpg',
-                imageAlt: 'Tarta de salmón ahumado y queso azul'
+                imageAlt: 'Tarta de salmón ahumado y queso azul',
+                recipeID: 'tarta-salmon'
             },
             {
                 title: "Tarta de choclo",
                 price: 10,
                 instructions: loremIntruccion,
                 imageSRC: '/img/recetas/tarta-choclo.jpg',
-                imageAlt: loremImgAlt
+                imageAlt: loremImgAlt,
+                recipeID: 'tarta-choclo'
             },
             {
                 title: "Tarta de tomate, cebolla y queso",
                 price: 10,
                 instructions: loremIntruccion,
                 imageSRC: '/img/recetas/tarta-capresse.jpg',
-                imageAlt: loremImgAlt
+                imageAlt: loremImgAlt,
+                recipeID: 'tarta-capresse'
             },
             {
                 title: "Tarta de espinaca",
                 price: 10,
                 instructions: loremIntruccion,
                 imageSRC: '/img/recetas/tarta-espinaca.jpg',
-                imageAlt: loremImgAlt
+                imageAlt: loremImgAlt,
+                recipeID: 'tarta-espinaca'
             }
         ]
     },
@@ -56,7 +60,8 @@ let recipes = [
                 price: 10,
                 instructions: '1. En un bowl poner la harina y la leche en dos partes mezclando en el medio.\n 2. Incorporar el huevo y seguir batiendo. \n 3. Dejar descansar media hora. \n 4. Pintar con manteca la sartén o panquequera. \n 5. Poner un poco de la mezcla e ir haciendo cada panqueque lo más finito posibles. \n 6. Para el relleno, escurrir la ricota con un repasador limpio para que te quede bien seca. \n 7. Picar la espinaca y la cebolla y rehogarlas con un poco de aceite. \n 8. Mezclar la ricota con la espinaca y la cebolla. Condimentar con sal, pimienta y mucha nuez moscada. Sumarle un huevo y mezclar. \n 9. Armar los canelones con el relleno frio. \n 10. Poner en la fuente un poco de salsa de tomate, e ir acomodando los canelones en fila. Sumar más salsa de tomate por encima, la crema de leche y queso rallado. \n 11. Llevar al horno hasta que gratine, y a disfrutar!',
                 imageSRC: 'img/recetas/canelones-de-ricota.jpeg',
-                imageAlt: 'Canelones de ricota'
+                imageAlt: 'Canelones de ricota',
+                recipeID: 'pasta-canelon-ricota'
             }
         ]
     },
@@ -69,7 +74,8 @@ let recipes = [
                 price: 10,
                 instructions: loremIntruccion,
                 imageSRC: loremImgSRC,
-                imageAlt: loremImgAlt
+                imageAlt: loremImgAlt,
+                recipeID: 'ensalada'
             }
         ]
     },
@@ -82,7 +88,8 @@ let recipes = [
                 price: 10,
                 instructions: loremIntruccion,
                 imageSRC: loremImgSRC,
-                imageAlt: loremImgAlt
+                imageAlt: loremImgAlt,
+                recipeID: 'sandwich'
             }
         ]
     },
@@ -95,7 +102,8 @@ let recipes = [
                 price: 10,
                 instructions: loremIntruccion,
                 imageSRC: loremImgSRC,
-                imageAlt: loremImgAlt
+                imageAlt: loremImgAlt,
+                recipeID: 'postre'
             }
         ]
     },
@@ -108,7 +116,8 @@ let recipes = [
                 price: 10,
                 instructions: loremIntruccion,
                 imageSRC: loremImgSRC,
-                imageAlt: loremImgAlt
+                imageAlt: loremImgAlt,
+                recipeID: 'bebida'
             }
         ]
     }

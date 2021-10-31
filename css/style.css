@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: 'Lato', sans-serif !important; 
+    font-family: 'Lato', sans-serif !important;
     text-align: center;
 }
 
@@ -30,7 +30,7 @@ html {
     background-color: white;
     border: none;
     color: var(--dark-grey);
-    
+
 }
 
 .carousel-link {
@@ -79,4 +79,28 @@ header {
 .fa-utensils {
     margin-left: 2%;
     margin-right: 2%;
+}
+
+/* ************* */
+/* Recipes style */
+/* ************* */
+
+.btn-modal {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.btn-modal:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.btn {
+    white-space: inherit !important;
+}
+
+.card{
+    border: none !important;
 }
