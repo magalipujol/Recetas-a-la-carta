@@ -1,13 +1,13 @@
 let app = Vue.createApp({
   data: function () {
     return {
-      recipes: recipes
+      recipes: recipes,
     };
   },
 });
 
 app.component("navbar", {
-  template: `
+  template: /* html */ `
     <nav class="navbar">
         <div class="brand-title">RECETAS A LA CARTA</div>
         <a href="#page-top" @click="toggleButton" class="toggle-button">
@@ -35,9 +35,9 @@ app.component("navbar", {
 
 app.component("animated-header", {
   props: {
-    animation: Boolean
+    animation: Boolean,
   },
-  template: `
+  template: /* html */ `
     <header class="bg-primary text-white text-center">
     <div v-if="animation">
     <img class="animate__animated animate__backInDown" src="img/favicon_io/salad-apple-touch-icon.png" alt="">
@@ -47,20 +47,16 @@ app.component("animated-header", {
     `,
 });
 
-// AAAAAAAAAAAAAAAAAAA PQ NO SALE
 app.component("slider-menu", {
   props: {
-    recipes: Array
+    recipes: Array,
   },
-  template: `
+  template: /* html */ `
     <div class="slider-menu" id="slider-menu">
     <div id="carousel-controls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" id="carousel-inner">
-    <div id="tartas-content-id" class="carousel-item active">
-    <a href="#tartas-content">{{ recipes[0].sectionName }} </a>
-      </div>
-      <div id="pastas-content-id" class="carousel-item">
-        <a href="#pastas-content">PAstas</a>
+      <div v-for="(recipe, index) in recipes" :id="recipe.sectionID + '-id'" :class="index == 0 ? 'carousel-item active' : 'carousel-item'">
+        <a :href="'#' + recipe.sectionID">{{ recipe.sectionName }}</a>
       </div>
     </div>
     <a
