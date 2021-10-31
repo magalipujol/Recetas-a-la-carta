@@ -13,29 +13,6 @@ function createElementsAndAddIdentifiers(element, ID, ...classes) {
 }
 
 
-// function addSectionsToCarousel(sectionName, sectionID) {
-
-//     if (sectionID == 'tartas-content') {
-//         var newItem = createElementsAndAddIdentifiers('div', 0, ['carousel-item', 'active'])
-//     } else {
-//         var newItem = createElementsAndAddIdentifiers('div', 0, ['carousel-item'])
-//     }
-//     var newLink = createElementsAndAddIdentifiers('a', 0, 0)
-//     newLink.href = "#" + sectionID
-//     newItem.appendChild(newLink)
-//     newLink.innerHTML = sectionName
-//     newItem.setAttribute('id', sectionID + '-id')
-
-
-
-
-//     document.getElementById("carousel-inner").appendChild(newItem)
-// }
-
-// for (let section of recipes) {
-//     addSectionsToCarousel(section.sectionName, section.sectionID)
-// }
-
 function addSectionsToMenu(sectionName, sectionID) {
     var newSection = createElementsAndAddIdentifiers('div', sectionID, 0)
     var newTitle = createElementsAndAddIdentifiers('h1', 0, 0)
